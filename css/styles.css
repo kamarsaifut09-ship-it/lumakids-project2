@@ -113,7 +113,6 @@ body { padding-top: 86px; }
   letter-spacing: .18em;
 }
 .ticker-group b { color: #8eeaff; margin: 0 30px; }
-.ticker:hover .ticker-track { animation-play-state: paused; }
 @keyframes ticker-marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
