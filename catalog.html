@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#e6007e">
+  <meta name="description" content="Каталог моделей Luma Kids."><title>Каталог моделей — Luma Kids</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="catalog-page">
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <header class="masthead" id="top"><a class="brand" href="./index.html"><img src="./public/images/logo.JPG" alt="Luma Kids"></a><span class="masthead-note">ШВЕЙНОЕ ПРОИЗВОДСТВО · УЗБЕКИСТАН</span><nav class="nav" id="nav"><a href="./catalog.html" aria-current="page">Каталог</a><a href="./index.html#studio">Цех</a><a href="./index.html#wholesale">Оптовикам</a></nav><a class="header-cta" href="./index.html#wholesale">Перейти к форме <span>↗</span></a><button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false"><i></i><i></i></button></header>
+  <main>
+    <section class="catalog-hero section"><div class="catalog-intro"><p class="eyebrow">01 / КАТАЛОГ МОДЕЛЕЙ</p><h1>Найдите<br><em>свою модель.</em></h1><p>Предварительный каталог по фотографиям из public. Возраст для примеров — 2–12 лет; категории можно изменить позже.</p></div><div class="catalog-tools" aria-label="Поиск и фильтры"><label class="search-field"><span>Поиск</span><input id="searchInput" type="search" placeholder="Название или категория" autocomplete="off"></label><label class="filter-field"><span>Категория</span><select id="categoryFilter"><option value="all">Все категории</option></select></label><label class="filter-field"><span>Возраст</span><select id="ageFilter"><option value="all">2–12 лет</option><option value="2-5">2–5 лет</option><option value="6-9">6–9 лет</option><option value="10-12">10–12 лет</option></select></label></div></section>
+    <section class="catalog-results section"><div class="catalog-meta"><span id="catalogCount"></span><span>Выберите одну или несколько моделей</span></div><div class="product-grid" id="productGrid"></div><div class="empty-state" id="emptyState" hidden>По этим параметрам моделей не найдено.</div><div class="catalog-selection-bar" id="catalogSelectionBar"><span id="selectionCount">Модели не выбраны</span><a class="submit-btn" href="./index.html#wholesale">Перейти к форме <span>↗</span></a></div></section>
+  </main>
+  <footer class="footer"><a class="footer-brand" href="./index.html"><img src="./public/images/logo.JPG" alt=""> LUMA KIDS</a><p>Детская одежда собственного производства<br>Самарканд, Узбекистан</p><div class="footer-links"><a href="https://t.me/lumakids_uz" target="_blank" rel="noopener">Telegram ↗</a><a href="https://instagram.com/lumak1d" target="_blank" rel="noopener">Instagram ↗</a><a href="./index.html">На главную ↑</a></div><small>© <span id="year"></span> Luma Kids</small></footer>
+  <dialog class="product-dialog" id="productDialog"><button class="dialog-close" type="button" aria-label="Закрыть">×</button><div id="dialogContent"></div></dialog>
+  <script src="./js/app.js"></script>
+</body>
+</html>
