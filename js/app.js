@@ -131,6 +131,30 @@ nav?.querySelectorAll("a").forEach(link => link.addEventListener("click", () => 
 }));
 document.querySelector("#year").textContent = new Date().getFullYear();
 
+(() => {
+  const ticker = document.querySelector(".ticker");
+  const track = ticker?.querySelector(".ticker-track");
+  const firstGroup = track?.querySelector(".ticker-group");
+  if (!ticker || !track || !firstGroup) return;
+
+  const fillTicker = () => {
+    track.querySelectorAll(".ticker-group[data-ticker-copy]").forEach(group => group.remove());
+    const groupWidth = firstGroup.getBoundingClientRect().width;
+    if (!groupWidth) return;
+    while (track.scrollWidth < ticker.clientWidth + groupWidth) {
+      const copy = firstGroup.cloneNode(true);
+      copy.setAttribute("aria-hidden", "true");
+      copy.dataset.tickerCopy = "true";
+      track.append(copy);
+    }
+    track.style.setProperty("--ticker-shift", `-${groupWidth}px`);
+  };
+
+  fillTicker();
+  window.addEventListener("resize", fillTicker, { passive: true });
+  document.fonts?.ready.then(fillTicker);
+})();
+
 document.querySelector("#leadForm")?.addEventListener("submit", async event => {
   event.preventDefault();
   const form = event.currentTarget;
